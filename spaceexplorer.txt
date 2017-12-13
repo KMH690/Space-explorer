@@ -1,0 +1,56 @@
+Let's make a game!
+	name:Space Explorer
+	by:KMH690
+	desc:My first idle game. Try to find new planets!
+	created:12/11/2017
+	updated:12/11/2017
+	version:1
+Settings
+	building cost increase:100%
+	no particles
+	no bulk particles
+Buttons
+	*mine
+		name:Find Resources
+		desc:Find Resources from this planet. Grants 1 ore per click.
+		on click:yield 1 ore
+Resources
+	*ore
+		name:Ore
+		desc:Basis of EVERYTHING!!!
+	*fuel
+		name:Fuel
+		desc:Helpful for transportation.
+Buildings
+	*plating
+		name:Plating
+		desc:Casing for your ship!
+		on tick:yield 0.5 ore
+		cost:30 ore
+	*wiring
+		name:Wiring
+		desc:Electricity!
+		on tick:yield 0.5 fuel
+		cost:30 ore
+	*computer
+		name:Computer|Computers
+		desc:Controls the rockets.
+		on tick:yield 5 ore
+		on tick:yield 5 fuel
+		cost:5 plating, 5 wiring
+	*fins
+		name:Fin|Fins
+		desc:Oooh! Aerodynamics!
+		on tick:yield 10 ore
+		cost:10 plating
+	*hull
+		name:Hull|Hulls
+		desc:Where all the astronauts are.
+		on tick:yield 100 ore
+		cost:25 plating, 2 fins, 5 computer
+	*tank
+		name:Fuel Tanks
+	*rockets
+		name:Thrusters
+	*shuttle
+		name:Shuttle|Shuttles
